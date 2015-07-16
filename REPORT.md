@@ -43,5 +43,46 @@ Note that I didn't need to restart the Chromecast, as was described in
 Note that you are using the receiver app hosted by Google, not yet the one in your own repo.
 
 
+
+
+
+# Using my own receiver
+
+
+
+## Register a new application
+
+In [Google Cast SDK Developer Console / Applications], register a new application with the URL of the receiver app.
+
+As name, I used `jandockx-CastHelloText`.
+
+The receiver app is in the same repo at github, and served next to the sender app, at
+<https://jandockx.github.io/CastHelloText-chrome/receiver.html>.
+
+
+
+## Tell the sender app to use my receiver app
+
+Copy / paste the `Application ID` into the sender app (`chromehellotext.html`, `applicationID` variable).
+
+
+
+## Done
+
+Commit, push, test.
+
+
+
+
+
+
+
+
+
+
 [Google Cast SDK Developer Console]: https://cast.google.com/publish/#/overview
+[Google Cast SDK Developer Console / Applications]: https://cast.google.com/publish/#/applications
 [Registration / Devices]: https://developers.google.com/cast/docs/registration#RegisterDevice
+
+
+
