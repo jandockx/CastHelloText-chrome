@@ -70,15 +70,6 @@ Copy / paste the `Application ID` into the sender app (`chromehellotext.html`, `
 ## Done
 
 Commit, push, test.
-Seems to work.
-
-
-
-
-# Make sure it works: change something in the receiver app
-
-To make sure this works, I'll change someting in the receiver app. I'll just add a paragraph to the receiver app HTML.
-Commit, push, test.
 
 
 
