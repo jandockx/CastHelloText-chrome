@@ -20,11 +20,10 @@ limitations under the License.
 	  body {
 	    overflow: hidden;
 	  }
-    div {
+    div, pre {
 	    height: 360px;
 	    width: 1280px;
 	    border: 0;
-	    vertical-align: middle;
 	  }
 
     div#message {
@@ -38,7 +37,8 @@ limitations under the License.
       font-size: 40px;
     }
 
-    div#console {
+    pre#console {
+      padding: 20px;
       text-align: left;
       color: whitesmoke;
       background-color: black;
@@ -51,7 +51,7 @@ limitations under the License.
   </head>
   <body>
   	<div id="message">Jan fecit.</div>
-    <div id="console">Loaded</div>
+    <pre id="console">Loaded</pre>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
