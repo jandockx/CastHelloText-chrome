@@ -67,9 +67,13 @@ Copy / paste the `Application ID` into the sender app (`chromehellotext.html`, `
 
 
 
-## Done
+## Doesn't work
 
 Commit, push, test.
+
+In the test, I just seem to be casting the tab. The receiver app isn't loaded.
+
+Restarting the Chromecast doesn't help.
 
 
 
