@@ -54,6 +54,7 @@ limitations under the License.
     <pre id="console">Loaded</pre>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
+      var localStorageKey = "lastState";
       window.onload = function() {
         cast.receiver.logger.setLevelValue(0);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -63,6 +64,14 @@ limitations under the License.
         castReceiverManager.onReady = function(event) {
           log('Received Ready event: ' + JSON.stringify(event.data));
           window.castReceiverManager.setApplicationState("Application status is ready...");
+          var storedState = localStorage.getItem(localStorageKey);
+          if (!storedState) {
+            log("No stored state.");
+          }
+          else {
+            log("Stored state: " + JSON.stringify(storedState));
+            displayText(storedState.text);
+          }
         };
 
         // handler for 'senderconnected' event
@@ -108,7 +117,8 @@ limitations under the License.
       // utility function to display the text message in the input field
       function displayText(text) {
         log(text);
-        document.getElementById("message").innerHTML=text;
+        localStorage.setItem(localStorageKey, {text: text});
+        document.getElementById("message").innerHTML = text;
         window.castReceiverManager.setApplicationState(text);
       }
 
