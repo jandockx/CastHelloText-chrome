@@ -76,6 +76,12 @@ In the test, I just seem to be casting the tab. The receiver app isn't loaded.
 Restarting the Chromecast doesn't help.
 
 
+## Works
+
+Eventually, after restarting Chrome, it works.
+It must be that the "app id" is cached somewhere in the cast-extension.
+
+
 
 
 
