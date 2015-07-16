@@ -69,8 +69,9 @@ limitations under the License.
             log("No stored state.");
           }
           else {
+            storedState = JSON.parse(storedState);
             log("Stored state: " + JSON.stringify(storedState));
-            displayText(storedState);
+            displayText(storedState.text);
           }
         };
 
@@ -117,7 +118,7 @@ limitations under the License.
       // utility function to display the text message in the input field
       function displayText(text) {
         log(text);
-        localStorage.setItem(localStorageKey, text);
+        localStorage.setItem(localStorageKey, JSON.stringify({text: text}));
         document.getElementById("message").innerHTML = text;
         window.castReceiverManager.setApplicationState(text);
       }
